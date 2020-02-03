@@ -29,6 +29,7 @@ const Input = styled.input `
 height: 30px;
 width: 5rem;
 border-radius: 30px;
+border: 1px solid black;
 
 
 `
@@ -53,7 +54,7 @@ export default function JobSeekerSignUp() {
 
             <Form>
         <Label>
-          Full Name: <br></br>
+          Full Name: <br></br> <br></br>
           <input
             type="text"
             name="name"
@@ -63,7 +64,7 @@ export default function JobSeekerSignUp() {
           />
         </Label>
         <Label>
-          Email: <br></br>
+          Email: <br></br> <br></br>
           <input
             type="text"
             name="email"
@@ -73,7 +74,7 @@ export default function JobSeekerSignUp() {
           />
         </Label>
         <Label>
-          Occupation: <br></br>
+          Occupation: <br></br> <br></br>
           <input
             type="text"
             name="role"
@@ -84,7 +85,7 @@ export default function JobSeekerSignUp() {
         </Label>
 
         <Label>
-          Type of Employment: <br></br>
+          Type of Employment: <br></br> <br></br>
           <select
             name="type"
            
@@ -98,7 +99,7 @@ export default function JobSeekerSignUp() {
         </Label>
 
         <Label>
-          Education: <br></br>
+          Education: <br></br> <br></br>
           <Textarea
             type="text"
             name="education"
@@ -108,7 +109,7 @@ export default function JobSeekerSignUp() {
           />
         </Label>
         <Label>
-          Previous Experiences: <br></br>
+          Previous Experiences: <br></br> <br></br>
           <Textarea
             type="text"
             name="experiences"
@@ -118,7 +119,7 @@ export default function JobSeekerSignUp() {
           />
         </Label>
         <Label>
-          Interests: <br></br>
+          Interests: <br></br> <br></br>
           <Textarea
             type="text"
             name="interests"
@@ -129,14 +130,6 @@ export default function JobSeekerSignUp() {
         </Label>
         <Input type="submit" />
       </Form>
-
-
-
-
-
-
-
-
 
 
 

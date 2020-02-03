@@ -30,6 +30,8 @@ const Input = styled.input `
 height: 30px;
 width: 5rem;
 border-radius: 30px;
+border: 1px solid black;
+
 
 
 `
@@ -54,7 +56,7 @@ export default function CompanySignUp () {
 
  <Form>
         <Label>
-          Company Name: <br></br>
+          Company Name: <br></br> <br></br>
           <input
             type="text"
             name="companyname"
@@ -64,7 +66,7 @@ export default function CompanySignUp () {
           />
         </Label>
         <Label>
-          Email: <br></br>
+          Email: <br></br> <br></br>
           <input
             type="text"
             name="companyemail"
@@ -74,7 +76,7 @@ export default function CompanySignUp () {
           />
         </Label>
         <Label>
-          Location: <br></br>
+          Location: <br></br> <br></br>
           <input
             type="text"
             name="location"
@@ -85,7 +87,7 @@ export default function CompanySignUp () {
         </Label>
 
         <Label>
-          Job Opportunities: <br></br>
+          Job Opportunities: <br></br> <br></br>
           <Textarea
             type="text"
             name="jobopp"
@@ -95,7 +97,7 @@ export default function CompanySignUp () {
           />
         </Label>
         <Label>
-          Criteria: <br></br>
+          Criteria: <br></br> <br></br>
           <Textarea
             type="text"
             name="criteria"

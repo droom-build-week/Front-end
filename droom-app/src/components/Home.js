@@ -26,11 +26,11 @@ border: 3px solid lavender;
 const Button = styled.button `
 border: 3px solid lavender;
 border-radius: 20px;
-padding-top: 10px;
-padding-bottom: 10px;
+padding: 20px 20px 20px 20px;
 margin-top: 20px;
 color: white;
-background: #3A6073;
+background: #4389A2;
+font-size: 1rem;
 
 
 `

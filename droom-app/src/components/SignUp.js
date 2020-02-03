@@ -10,7 +10,7 @@ const Div = styled.div `
 display: flex;
 /* border: 2px red solid; */
 justify-content: center;
-margin-top: 60px;
+margin-top: 30px;
 
 
 `
@@ -21,7 +21,7 @@ border-radius: 20px;
 padding-top: 10px;
 padding-bottom: 10px;
 color: white;
-background: #3A6073;
+background: #4389A2;
 margin-left: 20px;
 margin-right: 20px;
 
