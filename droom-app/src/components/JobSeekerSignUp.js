@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 const Form = styled.form `
 display: flex;
@@ -148,7 +149,8 @@ export default function JobSeekerSignUp() {
             // value={team.role}
           />
         </Label>
-        <Input type="submit" />
+        <Link to="/jobseekers-profile">
+        <Input type="submit" /> </Link>
       </Form>
 
 
