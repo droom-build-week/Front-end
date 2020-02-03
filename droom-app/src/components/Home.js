@@ -59,7 +59,7 @@ export default function Home() {
 
 {/* //Sign up button here */}
 
-<NavLink to="/signup">
+<NavLink exact to="/signup">
 <Button className="signupButton">Sign Up Now</Button>
 </NavLink>
 

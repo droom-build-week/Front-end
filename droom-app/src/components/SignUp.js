@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
+import CompanySignUp from "./CompanySignUp";
+import JobSeekerSignUp from "./JobSeekerSignUp";
 
 
 const Div = styled.div `
@@ -42,23 +44,30 @@ export default function SignUp() {
 <p>Please Select from the following: </p>
 
 <Div className="buttoncontainer">
-<Button>Job Seekers </Button>
-<Button>Companies </Button>
+
+
+<NavLink to="/signup/jobseekers">
+    <Button>Job Seekers </Button>
+    </NavLink>
+
+<NavLink  to="/signup/companies">
+    <Button>Companies </Button>
+</NavLink>
+
 </Div>
 
 
-{/* //need to add navlinks and nested routes */}
+
+{/* //Creating nested Routes */}
 
 
+<Route exact path="/signup/companies">
+<CompanySignUp />
+</Route>
 
-
-
-
-
-
-
-
-
+<Route exact path="/signup/jobseekers">
+<JobSeekerSignUp />
+</Route>
 
 
 
