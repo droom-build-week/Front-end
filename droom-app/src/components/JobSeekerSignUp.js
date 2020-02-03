@@ -33,6 +33,12 @@ border-radius: 30px;
 
 `
 
+const Textarea = styled.textarea `
+
+height: 100px;
+width: 400px;
+`
+
 
 
 export default function JobSeekerSignUp() {
@@ -93,7 +99,7 @@ export default function JobSeekerSignUp() {
 
         <Label>
           Education: <br></br>
-          <textarea
+          <Textarea
             type="text"
             name="education"
             placeholder="Please tell us about your relevant education."
@@ -103,7 +109,7 @@ export default function JobSeekerSignUp() {
         </Label>
         <Label>
           Previous Experiences: <br></br>
-          <textarea
+          <Textarea
             type="text"
             name="experiences"
             placeholder="Please tell us your past experiences. These must be relevant for the position you are looking to apply for."
@@ -113,7 +119,7 @@ export default function JobSeekerSignUp() {
         </Label>
         <Label>
           Interests: <br></br>
-          <textarea
+          <Textarea
             type="text"
             name="interests"
             placeholder="Please tell us about your relevant interests."
