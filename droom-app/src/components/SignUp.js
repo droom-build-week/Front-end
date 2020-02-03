@@ -40,17 +40,17 @@ export default function SignUp() {
 
 {/* //2 buttons: for jobseekers and for companies */}
 
-<h2>Sign Up Here</h2>
+<h1>Sign Up</h1>
 <p>Please Select from the following: </p>
 
 <Div className="buttoncontainer">
 
 
-<NavLink to="/signup/jobseekers">
+<NavLink to="/signup/jobseekers" replace >
     <Button>Job Seekers </Button>
     </NavLink>
 
-<NavLink  to="/signup/companies">
+<NavLink  to="/signup/companies" replace >
     <Button>Companies </Button>
 </NavLink>
 

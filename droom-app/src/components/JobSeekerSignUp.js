@@ -1,4 +1,40 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Form = styled.form `
+display: flex;
+justify-content: center;
+flex-direction: column;
+margin-top: 20px;
+padding-left: 30px;
+padding-right: 30px;
+border: 2px red solid;
+margin-left: 20px;
+margin-right: 20px;
+background: #acb6e5;
+border: 1px #3A6073 solid;
+align-items: center;
+padding-bottom: 20px;
+
+
+`
+
+const Label = styled.label `
+margin-top: 20px;
+margin-bottom: 20px;
+
+`
+
+const Input = styled.input `
+height: 30px;
+width: 5rem;
+border-radius: 30px;
+
+
+`
+
+
+
 
 export default function JobSeekerSignUp() {
 
@@ -7,12 +43,12 @@ export default function JobSeekerSignUp() {
 
 
         <div className="jobseekerformwrapper">
-            <h3> For JobSeekers: </h3>
+            <h3> Please Sign Up Here: </h3>
 
 
-            <form>
-        <label>
-          Name:
+            <Form>
+        <Label>
+          Name: <br></br>
           <input
             type="text"
             name="name"
@@ -20,9 +56,9 @@ export default function JobSeekerSignUp() {
             // onChange={eventChangeHandler}
             // value={team.name}
           />
-        </label>
-        <label>
-          Email:
+        </Label>
+        <Label>
+          Email: <br></br>
           <input
             type="text"
             name="email"
@@ -30,9 +66,9 @@ export default function JobSeekerSignUp() {
             // onChange={eventChangeHandler}
             // value={team.email}
           />
-        </label>
-        <label>
-          Role:
+        </Label>
+        <Label>
+          Role: <br></br>
           <input
             type="text"
             name="role"
@@ -40,22 +76,9 @@ export default function JobSeekerSignUp() {
             // onChange={eventChangeHandler}
             // value={team.role}
           />
-        </label>
-        <input type="submit" />
-      </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </Label>
+        <Input type="submit" />
+      </Form>
 
 
 

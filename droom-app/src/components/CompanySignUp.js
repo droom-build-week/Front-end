@@ -10,7 +10,7 @@ export default function CompanySignUp () {
 <div>
 
 
- <h1> Companies: </h1>
+ <h3> Please Sign Up Here: </h3>
     
     
     
