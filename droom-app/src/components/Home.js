@@ -57,14 +57,11 @@ export default function Home() {
             </Div>
 
 
-{/* //Sign up button here, wrapped in navlink: need to add signup component and declare route in app  */}
+{/* //Sign up button here, wrapped in navlink  */}
 
 <NavLink to="/signup">
 <Button className="signupButton">Sign Up Now</Button>
 </NavLink>
-
-
-
 
 
         </div>
