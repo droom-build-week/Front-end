@@ -57,7 +57,7 @@ export default function Home() {
             </Div>
 
 
-{/* //Sign up button here, wrapped in navlink  */}
+{/* //Sign up button here */}
 
 <NavLink to="/signup">
 <Button className="signupButton">Sign Up Now</Button>
