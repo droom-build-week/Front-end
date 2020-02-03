@@ -8,7 +8,6 @@ import JobSeekerSignUp from "./JobSeekerSignUp";
 const Div = styled.div `
 
 display: flex;
-/* border: 2px red solid; */
 justify-content: center;
 margin-top: 30px;
 
@@ -18,18 +17,15 @@ margin-top: 30px;
 const Button = styled.button `
 border: 3px solid lavender;
 border-radius: 20px;
-padding-top: 10px;
-padding-bottom: 10px;
+padding-top: 20px;
+padding-bottom: 20px;
 color: white;
 background: #4389A2;
-margin-left: 20px;
-margin-right: 20px;
+margin-left: 15px;
+margin-right: 15px;
 
 
 `
-
-
-
 
 
 export default function SignUp() {
@@ -41,7 +37,7 @@ export default function SignUp() {
 {/* //2 buttons: for jobseekers and for companies */}
 
 <h1>Sign Up</h1>
-<p>Please Select from the following: </p>
+<p>Please select from the following: </p>
 
 <Div className="buttoncontainer">
 

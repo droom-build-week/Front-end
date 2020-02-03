@@ -6,7 +6,6 @@ import { NavLink } from 'react-router-dom';
 //Styling the page
 
 const Div = styled.div `
-/* border: 1px red solid; */
 padding-top: 40px;
 margin-left: 20px;
 margin-right: 20px;

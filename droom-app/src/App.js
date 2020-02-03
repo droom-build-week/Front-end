@@ -3,6 +3,8 @@ import './App.css';
 import Home from "./components/Home";
 import SignUp from "./components/SignUp";
 import { Route, Switch } from 'react-router-dom';
+import CompanyProfile from './components/CompanyProfile';
+import JobListing from "./components/JobListing";
 
 
 
@@ -23,6 +25,16 @@ function App() {
     <SignUp />
       </Route>
 
+{/* //make dynamic? */}
+      <Route exact path="/companies-profile">
+    <CompanyProfile />
+      </Route>
+
+{/* //make dynamic */}
+
+      <Route exact path="/companies-profile/add-your-company">
+    <JobListing />
+      </Route>
 
       </Switch>
 

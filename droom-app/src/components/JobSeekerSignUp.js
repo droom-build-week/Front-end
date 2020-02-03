@@ -64,6 +64,16 @@ export default function JobSeekerSignUp() {
           />
         </Label>
         <Label>
+          Username: <br></br> <br></br>
+          <input
+            type="text"
+            name="username"
+            placeholder="Enter your username"
+            // onChange={eventChangeHandler}
+            // value={team.name}
+          />
+        </Label>
+        <Label>
           Email: <br></br> <br></br>
           <input
             type="text"
@@ -71,6 +81,16 @@ export default function JobSeekerSignUp() {
             placeholder="Enter your email"
             // onChange={eventChangeHandler}
             // value={team.email}
+          />
+        </Label>
+        <Label>
+          Password: <br></br> <br></br>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            // onChange={eventChangeHandler}
+            // value={team.name}
           />
         </Label>
         <Label>

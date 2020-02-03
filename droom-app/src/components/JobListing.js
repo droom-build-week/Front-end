@@ -1,8 +1,7 @@
+//Form for each company gets to add a Job listing 
+
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-
-
 
 const Form = styled.form `
 display: flex;
@@ -44,25 +43,30 @@ width: 400px;
 `
 
 
-//Admins sign up on behalf of company here first 
-//change the form to the admin fields and use the removed fields for companyListing form
 
-export default function CompanySignUp () {
+
+
+
+
+
+export default function JobListing() {
 
 
     return (
 
-<div className="companyformwrapper">
- <h3> Please Sign Up Here: </h3>
-    
+<div className="joblistingwrapper">
 
- <Form>
+        <p> Create Your Company's Job Listing Here: </p>
+
+
+
+        <Form>
         <Label>
-          Full Name: <br></br> <br></br>
+          Company Name: <br></br> <br></br>
           <input
             type="text"
-            name="adminname"
-            placeholder="Enter your name"
+            name="companyname"
+            placeholder="Enter the company name"
             // onChange={eventChangeHandler}
             // value={team.name}
           />
@@ -71,43 +75,55 @@ export default function CompanySignUp () {
           Email: <br></br> <br></br>
           <input
             type="text"
-            name="adminemail"
+            name="companyemail"
             placeholder="Enter your email"
             // onChange={eventChangeHandler}
             // value={team.email}
           />
         </Label>
         <Label>
-          Position: <br></br> <br></br>
+          Location: <br></br> <br></br>
           <input
             type="text"
-            name="adminposition"
-            placeholder="Enter your position"
+            name="location"
+            placeholder="Enter your location"
             // onChange={eventChangeHandler}
             // value={team.role}
           />
         </Label>
 
         <Label>
-          Password: <br></br> <br></br>
-          <input
-            type="password"
-            name="adminpassword"
-            placeholder="Enter your password"
+          Job Opportunities: <br></br> <br></br>
+          <Textarea
+            type="text"
+            name="jobopp"
+            placeholder="Please tell us about this your job listings. Provide name of role and description."
             // onChange={eventChangeHandler}
             // value={team.role}
           />
         </Label>
-        
+        <Label>
+          Criteria: <br></br> <br></br>
+          <Textarea
+            type="text"
+            name="criteria"
+            placeholder="Please tell us about the type of people you are looking for, to fufill your criteria."
+            // onChange={eventChangeHandler}
+            // value={team.role}
+          />
+        </Label>
     
-    <Link to="/companies-profile">
-        <Input type="submit"/> </Link>
+    
+        <Input type="submit"/> 
       </Form>
 
 
 
-    
-    
-     </div>
+
+
+
+
+</div>
+
     );
 }
