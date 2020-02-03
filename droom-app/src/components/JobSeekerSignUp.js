@@ -35,7 +35,6 @@ border-radius: 30px;
 
 
 
-
 export default function JobSeekerSignUp() {
 
 
@@ -48,11 +47,11 @@ export default function JobSeekerSignUp() {
 
             <Form>
         <Label>
-          Name: <br></br>
+          Full Name: <br></br>
           <input
             type="text"
             name="name"
-            placeholder="Enter your name here"
+            placeholder="Enter your name"
             // onChange={eventChangeHandler}
             // value={team.name}
           />
@@ -62,17 +61,62 @@ export default function JobSeekerSignUp() {
           <input
             type="text"
             name="email"
-            placeholder="Enter your email here"
+            placeholder="Enter your email"
             // onChange={eventChangeHandler}
             // value={team.email}
           />
         </Label>
         <Label>
-          Role: <br></br>
+          Occupation: <br></br>
           <input
             type="text"
             name="role"
-            placeholder="Enter your role here"
+            placeholder="Enter your occupation"
+            // onChange={eventChangeHandler}
+            // value={team.role}
+          />
+        </Label>
+
+        <Label>
+          Type of Employment: <br></br>
+          <select
+            name="type"
+           
+          // onChange={}
+            // value={} 
+            >
+            <option value="short">Short-Term </option>
+            <option value="mid">Mid-Term</option>
+            <option value="long">Long-Term</option>
+          </select>
+        </Label>
+
+        <Label>
+          Education: <br></br>
+          <textarea
+            type="text"
+            name="education"
+            placeholder="Please tell us about your relevant education."
+            // onChange={eventChangeHandler}
+            // value={team.role}
+          />
+        </Label>
+        <Label>
+          Previous Experiences: <br></br>
+          <textarea
+            type="text"
+            name="experiences"
+            placeholder="Please tell us your past experiences. These must be relevant for the position you are looking to apply for."
+            // onChange={eventChangeHandler}
+            // value={team.role}
+          />
+        </Label>
+        <Label>
+          Interests: <br></br>
+          <textarea
+            type="text"
+            name="interests"
+            placeholder="Please tell us about your relevant interests."
             // onChange={eventChangeHandler}
             // value={team.role}
           />
