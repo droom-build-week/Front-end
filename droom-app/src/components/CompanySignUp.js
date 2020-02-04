@@ -35,13 +35,8 @@ border-radius: 30px;
 border: 1px solid black;
 
 
-
 `
-const Textarea = styled.textarea `
 
-height: 100px;
-width: 400px;
-`
 
 
 //Admins sign up on behalf of company here first 

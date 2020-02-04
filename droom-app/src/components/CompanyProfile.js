@@ -50,8 +50,6 @@ export default function CompanyProfile () {
 
 
 
-
-
 {/* //Once they submit their company listing form--> goes to another page where they can create job listings */}
 
 

@@ -26,6 +26,9 @@ margin-bottom: 20px;
 
 `
 
+
+
+
 const Input = styled.input `
 height: 30px;
 width: 5rem;
