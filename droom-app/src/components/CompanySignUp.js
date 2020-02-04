@@ -64,8 +64,17 @@ export default function CompanySignUp () {
   const handleCompanySubmit = e => {
     e.preventDefault();
 
+if(!formInputisEmpty()) {
+
+console.log('hello from companysignin');
+
 //axios in here 
 
+
+
+
+
+}
 
 
   }
@@ -98,7 +107,7 @@ export default function CompanySignUp () {
             type="text"
             name="adminname"
             placeholder="Enter your name"
-            // onChange={eventChangeHandler}
+            onChange={handleCompanySubmit}
             value={adminsignup.adminname}
           />
         </Label>
@@ -108,7 +117,7 @@ export default function CompanySignUp () {
             type="text"
             name="adminemail"
             placeholder="Enter your email"
-            // onChange={eventChangeHandler}
+            onChange={handleCompanySubmit}
             value={adminsignup.adminemail}
           />
         </Label>
@@ -118,7 +127,7 @@ export default function CompanySignUp () {
             type="text"
             name="adminposition"
             placeholder="Enter your position"
-            // onChange={eventChangeHandler}
+            onChange={handleCompanySubmit}
             value={adminsignup.adminposition}
           />
         </Label>
@@ -129,7 +138,7 @@ export default function CompanySignUp () {
             type="password"
             name="adminpassword"
             placeholder="Enter your password"
-            // onChange={eventChangeHandler}
+            onChange={handleCompanySubmit}
             value={adminsignup.adminpassword}
           />
         </Label>

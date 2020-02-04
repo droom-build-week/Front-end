@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 
@@ -35,7 +35,55 @@ width: 400px;
 
 export default function JobSeekerSignUp() {
 
+  const [jobseekersign, setJobSeekerSign] = useState(initialValues);
+
+
+  const jobFormChange = e => {
+    if(e.target.value === e.target.value.toLowerCase()) {
+      console.log(e.target.value);
+      setJobSeekerSign({
+        ...jobseekersign,
+        [e.target.name] : e.target.value
+
+      });
+    }
+
+};
+
+
+const handlejobSubmit = e => {
+
+  e.preventDefault();
+
+  if(!formInputEmpty()) {
+
+    console.log('hello from jobseekersignin');
+    
+    //axios in here 
+    
+    
   
+    
+    }
+
+
+}
+
+//if form is empty function 
+
+function formInputEmpty() {
+  return (
+    jobseekersign.name === '' ||
+    jobseekersign.username === '' ||
+    jobseekersign.email === '' ||
+    jobseekersign.password === '' ||
+    jobseekersign.role === ''
+
+  );
+}
+
+
+
 
     return (
 
@@ -51,8 +99,8 @@ export default function JobSeekerSignUp() {
             type="text"
             name="name"
             placeholder="Enter your name"
-            // onChange={eventChangeHandler}
-            // value={team.name}
+            onChange={handlejobSubmit}
+            value={jobseekersign.name}
           />
         </Label>
         <Label>
@@ -61,8 +109,8 @@ export default function JobSeekerSignUp() {
             type="text"
             name="username"
             placeholder="Enter your username"
-            // onChange={eventChangeHandler}
-            // value={team.name}
+            onChange={handlejobSubmit}
+            value={jobseekersign.username}
           />
         </Label>
         <Label>
@@ -71,8 +119,8 @@ export default function JobSeekerSignUp() {
             type="text"
             name="email"
             placeholder="Enter your email"
-            // onChange={eventChangeHandler}
-            // value={team.email}
+            onChange={handlejobSubmit}
+            value={jobseekersign.email}
           />
         </Label>
         <Label>
@@ -81,8 +129,8 @@ export default function JobSeekerSignUp() {
             type="password"
             name="password"
             placeholder="Enter your password"
-            // onChange={eventChangeHandler}
-            // value={team.name}
+            onChange={handlejobSubmit}
+            value={jobseekersign.password}
           />
         </Label>
         <Label>
@@ -91,8 +139,8 @@ export default function JobSeekerSignUp() {
             type="text"
             name="role"
             placeholder="Enter your occupation"
-            // onChange={eventChangeHandler}
-            // value={team.role}
+            onChange={handlejobSubmit}
+            value={jobseekersign.role}
           />
         </Label>
 
@@ -102,7 +150,7 @@ export default function JobSeekerSignUp() {
             name="type"
            
           // onChange={}
-            // value={} 
+            // value={jobseekersign.type} 
             >
             <option value="short">Short-Term </option>
             <option value="mid">Mid-Term</option>
@@ -116,7 +164,7 @@ export default function JobSeekerSignUp() {
             type="text"
             name="education"
             placeholder="Please tell us about your relevant education."
-            // onChange={eventChangeHandler}
+            // onChange={}
             // value={team.role}
           />
         </Label>
@@ -126,7 +174,7 @@ export default function JobSeekerSignUp() {
             type="text"
             name="experiences"
             placeholder="Please tell us your past experiences. These must be relevant for the position you are looking to apply for."
-            // onChange={eventChangeHandler}
+            // onChange={}
             // value={team.role}
           />
         </Label>
@@ -136,8 +184,8 @@ export default function JobSeekerSignUp() {
             type="text"
             name="interests"
             placeholder="Please tell us about your relevant interests."
-            // onChange={eventChangeHandler}
-            // value={team.role}
+            // onChange={}
+            // value={}
           />
         </Label>
         <Link to="/jobseekers-profile">
@@ -149,4 +197,14 @@ export default function JobSeekerSignUp() {
             
         </div>
     )
+}
+
+
+const initialValues = {
+  name: "",
+  username: "",
+  email: "",
+  password: "",
+  role: ""
+
 }
