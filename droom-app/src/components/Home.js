@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components'
 import { NavLink } from 'react-router-dom';
 
 
@@ -30,10 +30,26 @@ margin-top: 20px;
 color: white;
 background: #4389A2;
 font-size: 1rem;
+margin-left: 10px;
+margin-right: 10px;
+margin-bottom: 20px;
+
 
 
 `
 
+const animationName = keyframes`
+  0% { background: #4776E6; }
+  100% { background: #1A2980; }
+`
+
+const SpecialDiv = styled.div `
+margin-left: 20px;
+margin-right: 20px;
+animation: ${animationName} 3s ease infinite alternate;
+
+
+`
 
 
 export default function Home() {
@@ -56,13 +72,18 @@ export default function Home() {
             </Div>
 
 
-{/* //Sign up button here */}
+{/* //Sign up and Login button here */}
 
+
+<SpecialDiv>
 <NavLink exact to="/signup">
-<Button className="signupButton">Sign Up Now</Button>
+<Button className="signupButton">Sign Up </Button>
+</NavLink>
+<NavLink exact to="/login">
+<Button className="signupButton">Login</Button>
 </NavLink>
 
-
+</SpecialDiv>
         </div>
     )
 

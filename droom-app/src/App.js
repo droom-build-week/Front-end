@@ -7,6 +7,7 @@ import CompanyProfile from './components/CompanyProfile';
 import JobListing from "./components/JobListing";
 import MatchList from "./components/MatchList";
 import UserProfile from "./components/UserProfile";
+import Login from "./components/Login";
 
 
 
@@ -25,6 +26,10 @@ function App() {
       </Route>
   <Route path="/signup">
     <SignUp />
+      </Route>
+
+      <Route path="/login">
+    <Login />
       </Route>
 
 {/* //make dynamic? */}
