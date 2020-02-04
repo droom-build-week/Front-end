@@ -72,8 +72,6 @@ console.log('hello from companysignin');
 
 
 
-
-
 }
 
 
@@ -100,14 +98,14 @@ console.log('hello from companysignin');
  <h3> Please Sign Up Here: </h3>
     
 
- <Form>
+ <Form onSubmit={handleCompanySubmit}>
         <Label>
           Full Name: <br></br> <br></br>
           <input
             type="text"
             name="adminname"
             placeholder="Enter your name"
-            onChange={handleCompanySubmit}
+            onChange={companyFormChange}
             value={adminsignup.adminname}
           />
         </Label>
@@ -117,7 +115,7 @@ console.log('hello from companysignin');
             type="text"
             name="adminemail"
             placeholder="Enter your email"
-            onChange={handleCompanySubmit}
+            onChange={companyFormChange}
             value={adminsignup.adminemail}
           />
         </Label>
@@ -127,7 +125,7 @@ console.log('hello from companysignin');
             type="text"
             name="adminposition"
             placeholder="Enter your position"
-            onChange={handleCompanySubmit}
+            onChange={companyFormChange}
             value={adminsignup.adminposition}
           />
         </Label>
@@ -138,7 +136,7 @@ console.log('hello from companysignin');
             type="password"
             name="adminpassword"
             placeholder="Enter your password"
-            onChange={handleCompanySubmit}
+            onChange={companyFormChange}
             value={adminsignup.adminpassword}
           />
         </Label>

@@ -83,8 +83,6 @@ function formInputEmpty() {
 }
 
 
-
-
     return (
 
 
@@ -92,14 +90,14 @@ function formInputEmpty() {
             <h3> Please Sign Up Here: </h3>
 
 
-            <Form>
+            <Form onSubmit={handlejobSubmit}>
         <Label>
           Full Name: <br></br> <br></br>
           <input
             type="text"
             name="name"
             placeholder="Enter your name"
-            onChange={handlejobSubmit}
+            onChange={jobFormChange}
             value={jobseekersign.name}
           />
         </Label>
@@ -109,7 +107,7 @@ function formInputEmpty() {
             type="text"
             name="username"
             placeholder="Enter your username"
-            onChange={handlejobSubmit}
+            onChange={jobFormChange}
             value={jobseekersign.username}
           />
         </Label>
@@ -119,7 +117,7 @@ function formInputEmpty() {
             type="text"
             name="email"
             placeholder="Enter your email"
-            onChange={handlejobSubmit}
+            onChange={jobFormChange}
             value={jobseekersign.email}
           />
         </Label>
@@ -129,7 +127,7 @@ function formInputEmpty() {
             type="password"
             name="password"
             placeholder="Enter your password"
-            onChange={handlejobSubmit}
+            onChange={jobFormChange}
             value={jobseekersign.password}
           />
         </Label>
@@ -139,7 +137,7 @@ function formInputEmpty() {
             type="text"
             name="role"
             placeholder="Enter your occupation"
-            onChange={handlejobSubmit}
+            onChange={jobFormChange}
             value={jobseekersign.role}
           />
         </Label>
@@ -150,7 +148,7 @@ function formInputEmpty() {
             name="type"
            
           // onChange={}
-            // value={jobseekersign.type} 
+            // value={} 
             >
             <option value="short">Short-Term </option>
             <option value="mid">Mid-Term</option>
@@ -165,7 +163,7 @@ function formInputEmpty() {
             name="education"
             placeholder="Please tell us about your relevant education."
             // onChange={}
-            // value={team.role}
+            // value={}
           />
         </Label>
         <Label>
@@ -175,7 +173,7 @@ function formInputEmpty() {
             name="experiences"
             placeholder="Please tell us your past experiences. These must be relevant for the position you are looking to apply for."
             // onChange={}
-            // value={team.role}
+            // value={}
           />
         </Label>
         <Label>
