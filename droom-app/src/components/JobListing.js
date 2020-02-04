@@ -1,6 +1,6 @@
 //Form for each company gets to add a Job listing 
 
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Form = styled.form `
@@ -44,12 +44,46 @@ width: 400px;
 
 
 
-
-
-
-
-
 export default function JobListing() {
+  
+  const [addListing, setAddListing] = useState(initialStateListing);
+
+  const listingFormChange = e => {
+    if (e.target.value === e.target.value.toLowerCase()) {
+      console.log(e.target.value);
+      setAddListing({
+        ...addListing,
+        [e.target.name]: e.target.value 
+      });
+    } 
+  };
+
+  const listingHandleSubmit = e => {
+    e.preventDefault();
+
+
+    if(!listFormInputIsEmpty()) {
+
+      console.log('hi from job listing form')
+        //axios here 
+
+    }
+
+
+  }
+
+
+  function listFormInputIsEmpty() {
+    return (
+      addListing.title === '' ||
+      addListing.jobopp === '' ||
+      addListing.salary === ''
+
+    );
+}
+
+
+
 
 
     return (
@@ -65,32 +99,23 @@ export default function JobListing() {
           Company Name: <br></br> <br></br>
           <input
             type="text"
-            name="companyname"
+            name="title"
             placeholder="Enter the company name"
-            // onChange={eventChangeHandler}
-            // value={team.name}
+            onChange={listingFormChange}
+            value={addListing.title}
           />
         </Label>
-        <Label>
-          Email: <br></br> <br></br>
-          <input
-            type="text"
-            name="companyemail"
-            placeholder="Enter your email"
-            // onChange={eventChangeHandler}
-            // value={team.email}
-          />
-        </Label>
-        <Label>
+      
+        {/* <Label>
           Location: <br></br> <br></br>
           <input
             type="text"
             name="location"
             placeholder="Enter your location"
-            // onChange={eventChangeHandler}
-            // value={team.role}
+            onChange={}
+            value={}
           />
-        </Label>
+        </Label> */}
 
         <Label>
           Job Opportunities: <br></br> <br></br>
@@ -98,19 +123,23 @@ export default function JobListing() {
             type="text"
             name="jobopp"
             placeholder="Please tell us about this your job listings. Provide name of role and description."
-            // onChange={eventChangeHandler}
-            // value={team.role}
+            onChange={listingFormChange}
+            value={addListing.jobopp}
           />
         </Label>
+       
         <Label>
-          Criteria: <br></br> <br></br>
-          <Textarea
-            type="text"
-            name="criteria"
-            placeholder="Please tell us about the type of people you are looking for, to fufill your criteria."
-            // onChange={eventChangeHandler}
-            // value={team.role}
-          />
+          Salary: <br></br> <br></br>
+          <select
+            name="salary"
+           
+          onChange={listingFormChange}
+            value={addListing.salary} 
+            >
+            <option value="low">£20-£50k </option>
+            <option value="mid">£50k-80k</option>
+            <option value="high">£80k+</option>
+          </select>
         </Label>
     
     
@@ -118,12 +147,14 @@ export default function JobListing() {
       </Form>
 
 
-
-
-
-
-
 </div>
 
     );
+}
+
+const initialStateListing = {
+  title: "",
+  jobopp: "",
+  salary: ""
+  
 }
