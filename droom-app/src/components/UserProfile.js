@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 //Cards display here: where user can swipe 
 
@@ -43,7 +44,9 @@ export default function UserProfile () {
 
             <Div>
             <H2>Welcome To Your Droom User Profile</H2>
-            <Button> Matches </Button>
+            
+            <Link to="/jobseekers-profile-matches">
+            <Button> Matches </Button></Link>
             </Div>
 
        

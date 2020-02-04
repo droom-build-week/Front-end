@@ -7,8 +7,8 @@ export default function MatchList () {
 
     return (
 
-        <div>
-            Hi from Match List 
+        <div className="matchListWrapper">
+           <h3>Check Out Your Job Matches </h3>
         </div>
     )
 }
