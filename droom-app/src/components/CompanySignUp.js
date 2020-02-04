@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -45,6 +45,46 @@ border: 1px solid black;
 export default function CompanySignUp () {
 
 
+  const [adminsignup, setAdminSignUp] = useState(initialValues);
+
+
+  const companyFormChange = e => {
+      if(e.target.value === e.target.value.toLowerCase()) {
+        console.log(e.target.value);
+        setAdminSignUp({
+          ...adminsignup,
+          [e.target.name] : e.target.value
+
+        });
+      }
+
+  };
+
+
+  const handleCompanySubmit = e => {
+    e.preventDefault();
+
+//axios in here 
+
+
+
+  }
+
+
+  //if form is empty function 
+
+  function formInputisEmpty() {
+    return (
+      adminsignup.adminname === '' ||
+      adminsignup.adminemail === '' ||
+      adminsignup.adminposition === '' ||
+      adminsignup.adminpassword === ''
+
+    );
+  }
+
+
+
     return (
 
 <div className="companyformwrapper">
@@ -59,7 +99,7 @@ export default function CompanySignUp () {
             name="adminname"
             placeholder="Enter your name"
             // onChange={eventChangeHandler}
-            // value={team.name}
+            value={adminsignup.adminname}
           />
         </Label>
         <Label>
@@ -69,7 +109,7 @@ export default function CompanySignUp () {
             name="adminemail"
             placeholder="Enter your email"
             // onChange={eventChangeHandler}
-            // value={team.email}
+            value={adminsignup.adminemail}
           />
         </Label>
         <Label>
@@ -79,7 +119,7 @@ export default function CompanySignUp () {
             name="adminposition"
             placeholder="Enter your position"
             // onChange={eventChangeHandler}
-            // value={team.role}
+            value={adminsignup.adminposition}
           />
         </Label>
 
@@ -90,7 +130,7 @@ export default function CompanySignUp () {
             name="adminpassword"
             placeholder="Enter your password"
             // onChange={eventChangeHandler}
-            // value={team.role}
+            value={adminsignup.adminpassword}
           />
         </Label>
         
@@ -105,4 +145,12 @@ export default function CompanySignUp () {
     
      </div>
     );
+}
+
+const initialValues = {
+  adminname: "",
+  adminemail: "",
+  adminposition: "",
+  adminpassword: ""
+
 }

@@ -35,15 +35,7 @@ width: 400px;
 
 export default function JobSeekerSignUp() {
 
-
-
-
-
-
-
-
   
-
 
     return (
 
@@ -151,8 +143,6 @@ export default function JobSeekerSignUp() {
         <Link to="/jobseekers-profile">
         <Input type="submit" /> </Link>
       </Form>
-
-
 
 
 
