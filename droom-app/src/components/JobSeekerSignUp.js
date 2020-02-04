@@ -51,7 +51,7 @@ export default function JobSeekerSignUp() {
 };
 
 
-const handlejobSubmit = e => {
+const handleJobSubmit = e => {
 
   e.preventDefault();
 
@@ -90,7 +90,7 @@ function formInputEmpty() {
             <h3> Please Sign Up Here: </h3>
 
 
-            <Form onSubmit={handlejobSubmit}>
+            <Form onSubmit={handleJobSubmit}>
         <Label>
           Full Name: <br></br> <br></br>
           <input
