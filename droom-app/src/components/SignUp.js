@@ -27,7 +27,6 @@ margin-right: 15px;
 
 `
 
-
 export default function SignUp() {
 
     return (

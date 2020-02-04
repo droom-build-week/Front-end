@@ -15,38 +15,34 @@ margin-right: 20px;
 background: #acb6e5;
 border: 1px #3A6073 solid;
 align-items: center;
-padding-bottom: 20px;
-
-
-`
+padding-bottom: 20px; `
 
 const Label = styled.label `
 margin-top: 20px;
-margin-bottom: 20px;
-
-`
-
-
-
+margin-bottom: 20px; `
 
 const Input = styled.input `
 height: 30px;
 width: 5rem;
 border-radius: 30px;
 border: 1px solid black;
-
-
 `
 
 const Textarea = styled.textarea `
-
 height: 100px;
 width: 400px;
 `
 
-
-
 export default function JobSeekerSignUp() {
+
+
+
+
+
+
+
+
+  
 
 
     return (
