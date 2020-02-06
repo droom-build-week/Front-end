@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
+import axios from "axios";
 
+//// Login an admin
+//'/api/auth/login-admin'  POST
 
 const Form = styled.form `
 display: flex;
@@ -42,6 +46,8 @@ export default function CompanyLogin() {
 
     const [adminlogin, setAdminLogin] = useState(initialLoginValues);
 
+    const history = useHistory();
+
 
     const companyLoginFormChange = e => {
         if(e.target.value === e.target.value.toLowerCase()) {
@@ -56,21 +62,39 @@ export default function CompanyLogin() {
     };
 
 
+
     const handleCompanyLoginSubmit = e => {
         e.preventDefault();
     
     if(!companyLoginFormEmpty()) {
     
-    console.log('hello from companylogin');
+
+  
+      axios 
+      .post('https://reqres.in/api/users/', adminlogin)
+      .then(response => {
+        //data we are getting back from server 
+        console.log(response.data);
+        //if successful: refresh the form 
+        setAdminLogin(initialLoginValues);
+        history.push("/companies-profile/:id");
+
+      })
+  
+      .catch(e => console.log(e))
+      .finally(() => {
+        console.log('Axios request finished');
+      });
+
+
+  
     
-    //axios in here 
-    
-    
-    
+    } else {
+      console.log('Form is incomplete!!');
     }
     
     
-      }
+      };
 
 //if form is empty function 
 
@@ -114,6 +138,8 @@ function companyLoginFormEmpty() {
         </Label>
         
     
+    {/* //need to map through data from POST to generate unique company profile for each admin logging in  */}
+       
         <Input type="submit"/> 
       </Form>
 

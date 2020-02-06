@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 
 
@@ -142,8 +141,8 @@ console.log('hello from companysignin');
         </Label>
         
     
-    <Link to="/companies-profile">
-        <Input type="submit"/> </Link>
+   
+        <Input type="submit"/> 
       </Form>
 
 

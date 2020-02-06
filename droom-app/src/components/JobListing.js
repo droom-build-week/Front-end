@@ -16,10 +16,7 @@ margin-right: 20px;
 background: #acb6e5;
 border: 1px #3A6073 solid;
 align-items: center;
-padding-bottom: 20px;
-
-
-`
+padding-bottom: 20px; `
 
 const Label = styled.label `
 margin-top: 20px;
@@ -50,13 +47,16 @@ export default function JobListing() {
 
   const listingFormChange = e => {
     if (e.target.value === e.target.value.toLowerCase()) {
-      console.log(e.target.value);
+      // console.log(e.target.value);
       setAddListing({
         ...addListing,
         [e.target.name]: e.target.value 
+       
       });
+     
     } 
   };
+
 
   const listingHandleSubmit = e => {
     e.preventDefault();
@@ -64,7 +64,6 @@ export default function JobListing() {
 
     if(!listFormInputIsEmpty()) {
 
-      console.log('hi from job listing form')
         //axios here 
 
     }
@@ -94,7 +93,7 @@ export default function JobListing() {
 
 
 
-        <Form>
+        <Form onSubmit={listingHandleSubmit}>
         <Label>
           Company Name: <br></br> <br></br>
           <input

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 
 const Form = styled.form `
@@ -54,17 +56,26 @@ export default function JobSeekerLogin () {
       
         if(!loginFormIsEmpty()) {
       
-          console.log('hello from jobseekerslogin');
+          axios
+          .post('/api/auth/login', jobseekerlogin)
+          .then(res => {
+            console.log(res.data);
+
+            setJobSeekerLogin(initialLoginValues);
+          })
+      
+          .catch(e => console.log(e))
+          .finally(() => {
+            console.log('Axios request finished')
+          });
           
-          //axios in here 
           
-          
-        
-          
+          } else {
+            console.log('form is incomplete, dont send');
           }
       
       
-      }
+      };
 
 
       function loginFormIsEmpty() {
@@ -105,8 +116,11 @@ export default function JobSeekerLogin () {
             value={jobseekerlogin.password}
           />
         </Label>
+
+        {/* //Only link to profile after logged in */}
        
-        <Input type="submit" /> 
+        <Link to="/jobseekers-profile">
+        <Input type="submit" /> </Link>
       </Form>
 
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { NavLink, Route } from 'react-router-dom';
 import JobSeekerLogin from "./JobSeekerLogin";

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Form = styled.form `
 display: flex;
@@ -56,18 +56,30 @@ const handleJobSubmit = e => {
   e.preventDefault();
 
   if(!formInputEmpty()) {
+    
+    axios
+    .post('/api/auth/register', jobseekersign)
+    .then(res => {
+      console.log(res.data);
+      //if successful, refresh the form 
+      setJobSeekerSign(initialValues);
+    })
 
-    console.log('hello from jobseekersignin');
+    .catch(e => console.log(e))
+    .finally(() => {
+      console.log('Axios request finished')
+    });
     
-    //axios in here 
-    
-    
-  
-    
+
+
+
+    } else {
+      console.log('form is incomplete, dont send');
     }
 
 
-}
+};
+
 
 //if form is empty function 
 
@@ -186,8 +198,8 @@ function formInputEmpty() {
             // value={}
           />
         </Label>
-        <Link to="/jobseekers-profile">
-        <Input type="submit" /> </Link>
+      
+        <Input type="submit" /> 
       </Form>
 
 
