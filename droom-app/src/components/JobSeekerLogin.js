@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 import axios from "axios";
 
 
@@ -36,6 +36,7 @@ export default function JobSeekerLogin () {
 
     const [jobseekerlogin, setJobSeekerLogin] = useState(initialLoginValues);
 
+    const history = useHistory();
 
     const jobLoginFormChange = e => {
         if(e.target.value === e.target.value.toLowerCase()) {
@@ -57,11 +58,12 @@ export default function JobSeekerLogin () {
         if(!loginFormIsEmpty()) {
       
           axios
-          .post('/api/auth/login', jobseekerlogin)
+          .post('https://droom-jobs.herokuapp.com/api/auth/login', jobseekerlogin)
           .then(res => {
             console.log(res.data);
 
             setJobSeekerLogin(initialLoginValues);
+            history.push('/jobseekers-profile')
           })
       
           .catch(e => console.log(e))
@@ -117,23 +119,10 @@ export default function JobSeekerLogin () {
           />
         </Label>
 
-        {/* //Only link to profile after logged in */}
        
-        <Link to="/jobseekers-profile">
-        <Input type="submit" /> </Link>
+        
+        <Input type="submit" /> 
       </Form>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
