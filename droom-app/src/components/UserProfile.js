@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 //Cards display here: where user can swipe 
-
+//Gets data from JobSeekerSignUp
 
 const Div = styled.div `
 display: flex;
@@ -24,7 +24,6 @@ margin-right: 60px;
 margin-top: 10px;
 
 `
-
 const H2 = styled.h2 `
 width: 100%;
 margin-left: 150px;
@@ -35,6 +34,11 @@ margin-left: 150px;
 
 
 export default function UserProfile () {
+
+
+
+
+    
 
     return (
 

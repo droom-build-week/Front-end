@@ -4,9 +4,9 @@ import Home from "./components/Home";
 import SignUp from "./components/SignUp";
 import { Route, Switch } from 'react-router-dom';
 import CompanyProfile from './components/CompanyProfile';
-import JobListing from "./components/JobListing";
 import MatchList from "./components/MatchList";
 import UserProfile from "./components/UserProfile";
+import Login from "./components/Login";
 
 
 
@@ -27,20 +27,22 @@ function App() {
     <SignUp />
       </Route>
 
-{/* //make dynamic? */}
-      <Route exact path="/companies-profile">
+      <Route path="/login">
+    <Login />
+      </Route>
+
+
+      <Route exact path="/companies-profile/:id">
     <CompanyProfile />
       </Route>
 
-{/* //make dynamic */}
 
-      <Route exact path="/companies-profile/add-your-company">
-    <JobListing />
-      </Route>
+
+  
 
       {/* //dynamic path- change URL */}
 
-{/* //add this route path as a link somewhere!!! */}
+
       <Route exact path="/jobseekers-profile-matches">
     <MatchList />
       </Route>

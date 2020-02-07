@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, Route, useRouteMatch} from 'react-router-dom';
+import JobListing from "./JobListing";
 
 
 //Admin's Page: create companies they want and add job listenings to each company card
 //each company is a card
+///api/admins/:id' GET 
+
+//does not work with :id params 
 
 
 const Div = styled.div `
@@ -26,10 +30,9 @@ height: 40px;
 `
 
 
-
-
-
 export default function CompanyProfile () {
+
+    const { path, url } = useRouteMatch();
 
     return (
 
@@ -42,12 +45,15 @@ export default function CompanyProfile () {
     {/* //search feature? */}
 
 
-    <Link to= "/companies-profile/add-your-company">
-    <Button> Add Your Company</Button></Link>
+    <Link to={`${url}/add-company`} >
+    <Button> Add Your Company</Button> </Link>
+
 </Div>
 
 
-
+<Route exact path={`${path}/add-company`}>
+    <JobListing />
+      </Route>
 
 
 {/* //Once they submit their company listing form--> goes to another page where they can create job listings */}

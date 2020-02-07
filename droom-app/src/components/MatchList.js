@@ -10,7 +10,6 @@ border: 3px solid lavender;
 
 `
 
-
 export default function MatchList () {
 
 
